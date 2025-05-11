@@ -2,153 +2,95 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Physik Quiz 3 – Atmosphäre und Strahlung</title>
+  <title>Quiz 3 – Atmosphäre und Strahlung</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
-    .container { background: white; max-width: 800px; margin: auto; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1, h2 { color: #333; }
-    .task { margin-bottom: 40px; }
-    textarea { width: 100%; height: 40px; margin-bottom: 10px; font-size: 14px; }
-    button { padding: 10px 15px; font-size: 14px; cursor: pointer; margin-top: 5px; }
-    .video-container { margin-top: 10px; display: none; }
-    iframe { width: 100%; height: 315px; border: none; border-radius: 5px; }
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { color: #222; }
+    .task { margin-bottom: 30px; }
+    textarea { width: 100%; height: 40px; font-size: 14px; margin-top: 5px; }
+    button { margin-top: 5px; padding: 8px 12px; font-size: 14px; }
+    .feedback { display: none; margin-top: 10px; background: #eef; padding: 10px; border-radius: 5px; }
   </style>
   <script>
-    function showSolution(id, text) {
-      const solution = document.getElementById("solution_" + id);
-      solution.textContent = "Richtige Antwort: " + text;
-      solution.style.display = "block";
-    }
-    function showVideo(id) {
-      const vid = document.getElementById("video_" + id);
-      vid.style.display = "block";
+    function showSolution(id, solution) {
+      const elem = document.getElementById("solution_" + id);
+      elem.innerText = "Richtige Antwort: " + solution;
+      elem.style.display = "block";
     }
   </script>
 </head>
 <body>
 <div class="container">
-  <h1>Physik Quiz 3 – Atmosphäre und Strahlung</h1>
+  <h1>Quiz 3 – Atmosphäre und Strahlung</h1>
 
     <div class="task">
-      <h2>Frage 1</h2>
-      <p>Welche Strahlung wird hauptsächlich durch die Ozonschicht absorbiert?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(1, 'UV-Strahlung')">Lösung anzeigen</button>
-      <button onclick="showVideo(1)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_1">
-        <iframe src="https://www.youtube.com/embed/QUN-49Iu2so" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_1" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 1:</strong> Welche Strahlung wird hauptsächlich durch die Ozonschicht absorbiert?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(1, `UV-Strahlung`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_1"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 2</h2>
-      <p>Warum ist UV-Strahlung gefährlich für den Menschen?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(2, 'Sie kann Zellen schädigen und Hautkrebs verursachen')">Lösung anzeigen</button>
-      <button onclick="showVideo(2)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_2">
-        <iframe src="https://www.youtube.com/embed/NJln9FhSBf8" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_2" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 2:</strong> Warum ist UV-Strahlung gefährlich für den Menschen?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(2, `Sie kann Zellen schädigen und Hautkrebs verursachen`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_2"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 3</h2>
-      <p>Was versteht man unter dem UV-Index?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(3, 'Ein Maß für die Sonnenbrandgefahr durch UV-Strahlung')">Lösung anzeigen</button>
-      <button onclick="showVideo(3)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_3">
-        <iframe src="https://www.youtube.com/embed/HO4B4U1fJDs" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_3" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 3:</strong> Was versteht man unter dem UV-Index?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(3, `Ein Maß für die Sonnenbrandgefahr durch UV-Strahlung`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_3"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 4</h2>
-      <p>Wie schützt Sonnencreme vor UV-Strahlung?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(4, 'Sie reflektiert oder absorbiert UV-Strahlen')">Lösung anzeigen</button>
-      <button onclick="showVideo(4)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_4">
-        <iframe src="https://www.youtube.com/embed/HO4B4U1fJDs" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_4" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 4:</strong> Wie schützt Sonnencreme vor UV-Strahlung?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(4, `Sie reflektiert oder absorbiert UV-Strahlen`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_4"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 5</h2>
-      <p>Welche Rolle spielt das Ozonloch?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(5, 'Es lässt mehr UV-Strahlung zur Erde')">Lösung anzeigen</button>
-      <button onclick="showVideo(5)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_5">
-        <iframe src="https://www.youtube.com/embed/xDeyJH9LXY4" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_5" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 5:</strong> Welche Rolle spielt das Ozonloch?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(5, `Es lässt mehr UV-Strahlung zur Erde`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_5"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 6</h2>
-      <p>Was ist Infrarotstrahlung?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(6, 'Wärmestrahlung')">Lösung anzeigen</button>
-      <button onclick="showVideo(6)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_6">
-        <iframe src="https://www.youtube.com/embed/I5Rz9E8ujgY" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_6" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 6:</strong> Was ist Infrarotstrahlung?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(6, `Wärmestrahlung`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_6"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 7</h2>
-      <p>Was passiert mit Sonnenstrahlung in der Atmosphäre?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(7, 'Ein Teil wird absorbiert, reflektiert und gestreut')">Lösung anzeigen</button>
-      <button onclick="showVideo(7)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_7">
-        <iframe src="https://www.youtube.com/embed/l7QoV2L27nM" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_7" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 7:</strong> Was passiert mit Sonnenstrahlung in der Atmosphäre?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(7, `Ein Teil wird absorbiert, reflektiert und gestreut`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_7"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 8</h2>
-      <p>Welche Farbe streut die Atmosphäre am stärksten?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(8, 'Blau')">Lösung anzeigen</button>
-      <button onclick="showVideo(8)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_8">
-        <iframe src="https://www.youtube.com/embed/oCmz1FT-NnM" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_8" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 8:</strong> Welche Farbe streut die Atmosphäre am stärksten?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(8, `Blau`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_8"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 9</h2>
-      <p>Was verursacht den Treibhauseffekt?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(9, 'Bestimmte Gase halten Infrarotstrahlung zurück')">Lösung anzeigen</button>
-      <button onclick="showVideo(9)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_9">
-        <iframe src="https://www.youtube.com/embed/Rp1yD_JtVbI" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_9" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 9:</strong> Was verursacht den Treibhauseffekt?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(9, `Bestimmte Gase halten Infrarotstrahlung zurück`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_9"></div>
     </div>
-    
+
     <div class="task">
-      <h2>Frage 10</h2>
-      <p>Warum erscheint der Himmel blau?</p>
-      <textarea placeholder="Antwort eingeben..."></textarea><br/>
-      <button onclick="showSolution(10, 'Blaues Licht wird stärker gestreut als rotes')">Lösung anzeigen</button>
-      <button onclick="showVideo(10)">Erklärvideo anzeigen</button>
-      <div class="video-container" id="video_10">
-        <iframe src="https://www.youtube.com/embed/oCmz1FT-NnM" allowfullscreen></iframe>
-      </div>
-      <div class="feedback" id="solution_10" style="display:none; margin-top:10px; background:#eef; padding:10px; border-radius:5px;"></div>
+      <strong>Frage 10:</strong> Warum erscheint der Himmel blau?<br>
+      <textarea placeholder="Antwort eingeben..."></textarea><br>
+      <button onclick="showSolution(10, `Blaues Licht wird stärker gestreut als rotes`)">Lösung anzeigen</button>
+      <div class="feedback" id="solution_10"></div>
     </div>
-    
-</div>
-</body>
-</html>
+</div></body></html>
